@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #263238;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Silkscreen', sans-serif;
+  color: white;
+  font-size: 35px;
+}
+
+h5 {
+  margin-bottom: 30px;
+  color: white;
+}
+
+#game {
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  background-image: url(img/background.png);
+  border: 2px solid #90a4ae;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#player {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  height: 150px;
+  width: 110px;
+  background-image: url("img/leandro.png");
+  background-size: cover;
+}
+
+.enemy {
+  position: absolute;
+  bottom: 10px;
+  width: 50px;
+  height: 40px;
+  background-image: url("img/barata.png");
+  background-size: cover;
+}
+
+.enemy.dead {
+  background-image: url("img/barata_morta.png");
+  transform: scaleY(0.5);
+  height: 33px;
+  bottom: 5px;
+}
+
+#message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  padding: 16px 32px;
+  border-radius: 8px;
+  color: #263238;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Silkscreen', sans-serif;
+
+}
+
+#goal {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  height: 150px;
+  width: 84px;
+  background-image: url("img/tati.png");
+  background-size: cover;
+  display: none;
+}
+
+#nextButton {
+  margin-top: 16px;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #263238;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Silkscreen', sans-serif;
+}
+
+#nextButton:hover {
+  letter-spacing: 0.5px;
+}
+
+.overlay {
+  position: absolute;
+  width: 1000px;
+  height: 500px;
+  padding-top: 100px;
+  font-size: 18px;
+  border-radius: 10px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffffe8;
+  color: #263238;
+  text-align: center;
+  z-index: 10;
+}
+
+#startButton {
+  margin-top: 30px;
+  padding: 20px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #263238;
+  color: white;
+  border-radius: 10px;
+  font-family: 'Silkscreen', sans-serif;
+}
+
+#startButton:hover {
+  letter-spacing: 0.5px;
+}
+
+#progressContainer {
+  width: 1000px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#progressBar {
+  width: 0%;
+  height: 100%;
+  background-color: #6B7B7B;
+  transition: width 0.3s ease;
+}

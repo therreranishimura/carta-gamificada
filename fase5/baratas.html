@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fase 05 - Baratas</title>
+  <link rel="stylesheet" href="baratas.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>BARATAS DO APOCALIPSE</h1>
+    <h5>A MISSÃO AGORA É TENSA! TATI ESTÁ EM TERRITÓRIO INIMIGO MATE AS BARATAS PARA SALVÁ-LA!</h5>
+    <div id="game">
+      <div id="player"></div>
+      <div id="goal"></div>
+      <div id="startScreen" class="overlay">
+        <h2>CONTROLES</h2>
+        <p>ESPAÇO = PULAR<br>ENTER = REINICIAR</p>
+        <button id="startButton">INICIAR JOGO</button>
+      </div>
+      <div id="message">Parabéns! Você salvou sua princesa e merece receber seu prêmio...</div>
+      <button id="nextButton" style="display: none;">Continuar</button>
+    </div>
+    <div id="progressContainer">
+      <div id="progressBar"></div>
+    </div>
+  </div>
+
+  <script src="baratas.js"></script>
+</body>
+
+</html>
