@@ -1,0 +1,78 @@
+body {
+display: flex;
+justify-content: center; 
+align-items: center;
+height: 100vh;
+font-family: 'Poppins', sans-serif;
+background-color: #263238;
+color: white;
+text-align: center;
+overflow-y: hidden;
+}
+
+
+.envelope {
+width: 350px;
+transition: transform 0.3s ease;
+cursor: pointer;
+}
+
+.envelope:hover {
+transform: scale(1.05);
+}
+
+.envelope img {
+width: 100%;
+}
+
+.carta {
+background-color: white;
+color: #263238;
+padding: 30px;
+width: 55%;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+animation: slideUp 0.5s ease forwards;
+font-size: 14px;
+}
+
+@keyframes slideUp {
+from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+button {
+margin-top: 30px;
+padding: 16px 32px;
+font-size: 16px;
+font-weight: bold;
+background-color: #263238;
+color: white;
+border: none;
+border-radius: 8px;cursor: pointer;
+font-family: 'Silkscreen', sans-serif;
+transition: transform 0.3s ease;
+}
+
+button:hover {
+transform: scale(1.05);
+letter-spacing: 0.5px;
+}
+
+.hidden {
+display: none;
+}
+
+.entre-parenteses {
+  color: #7f939e;
+}
+
+.text {
+  text-align: justify;
+}

@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #263238;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Silkscreen', sans-serif;
+  color: white;
+  font-size: 35px;
+}
+
+h5 {
+  text-align: center;
+  color: white;
+}
+
+.enigma {
+  text-align: center;
+  color: #263238;
+  font-size: 18px;
+  margin: 20px 0;
+  font-family: 'Courier New', monospace;
+  background-color: #e7e7e7cc;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.resposta {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#respostaInput {
+  font-family: 'Poppins', sans-serif;
+  padding: 8px;
+  font-size: 12px;
+  margin-top: 5px;
+  width: 75%;
+  font-style: italic;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #433e3e;
+}
+
+.pergunta {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 12px;
+  border: none;
+  background-color: #263238;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  letter-spacing: 0.5px;
+}
+
+.mensagem {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #b30000;
+  font-size: 12px;
+}
+
+.barra {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+  height: 12px;
+  display: none;
+}
+
+.progresso {
+  height: 100%;
+  width: 0%;
+  background-color: #263238;
+  transition: width 5s linear;
+}
+
+.inputs {
+  position: relative;
+  width: 55%;
+  margin: 0 auto;
+}
+
+.inputs input {
+  width: 100%;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #433e3e;
+  font-style: italic;
+  position: relative;
+  z-index: 2;
+}
+
+.underline::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #263238;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.inputs input:focus+.underline::after,
+.inputs input:hover+.underline::after {
+  transform: scaleX(1);
+}

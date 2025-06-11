@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fase 04 - Enigma</title>
+  <link rel="stylesheet" href="enigma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>INSTRUÇÕES SECRETAS</h1>
+  <h5>ECOS PERDIDOS CHEGARAM ATÉ VOCÊ EM FORMA DE SINAIS<br>
+    DECIFRE A MENSAGEM ABAIXO E MOSTRE QUE ENTENDEU O RECADO
+  </h5>
+
+  <div class="container">
+
+    <div class="enigma">
+      <code>
+        ...- --- -.-. .     -.. . ...- .     --- -... . -.. . -.-. . .-.     .-     - .- - .. .- -. .     . --     - ..- -..---   
+      </code>
+    </div>
+
+    <div class="resposta">
+      <div class="inputs">
+        <input type="text" id="respostaInput" placeholder="DIGITE AQUI A MENSAGEM DECIFRADA">
+        <div class="underline"></div>
+      </div>
+    </div>
+
+    <div class="pergunta">
+      <p>VOCÊ SE COMPROMETE A SEGUIR A ORIENTAÇÃO QUE LHE FOI DADA?</p>
+      <label><input type="radio" name="concorda" value="sim"> SIM</label>
+      <label><input type="radio" name="concorda" value="nao"> NÃO</label>
+    </div>
+
+    <button id="verificarButton">ENVIAR</button>
+
+    <p id="mensagemFeedback" class="mensagem"></p>
+    <div id="barraCarregamento" class="barra">
+      <div class="progresso"></div>
+    </div>
+  </div>
+
+  <script src="enigma.js"></script>
+</body>
+
+</html>

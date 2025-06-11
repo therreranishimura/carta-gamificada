@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #263238;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+main.container {
+  background-color: #FFFFFF;
+  max-width: 400px;
+  width: 100%;
+  padding: 32px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+main h2 {
+  font-weight: 500;
+  margin-bottom: 24px;
+  position: relative;
+  color: #263238;
+}
+
+main h2::before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 55px;
+  bottom: 3px;
+  left: 0;
+  border-radius: 8px;
+  background: #263238;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  position: relative;
+  margin-top: 24px;
+}
+
+.inputs input {
+  width: 100%;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.inputs input::placeholder {
+  color: rgb(77, 76, 76);
+  font-style: oblique;
+  font-weight: 100;
+}
+
+.inputs .underline::before,
+.inputs .underline::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+}
+
+.inputs .underline::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.inputs .underline::after {
+  background: #263238;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.inputs input:focus~.underline::after {
+  transform: scaleX(1);
+}
+
+form input[type="submit"] {
+  margin-top: 32px;
+  padding: 10px;
+  background: linear-gradient(to left, #263238, #2e414c);
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  letter-spacing: 0.5px;
+}
+
+.dica {
+  margin-top: 32px;
+  padding: 6px;
+  background: white;
+  color: #5f686d;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+#message {
+  margin-top: 8px;
+  font-weight: 300;
+  color: #b30000;
+  font-size: 12px;
+}
