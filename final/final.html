@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carta</title>
+  <link rel="stylesheet" href="final.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Silkscreen&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="envelope" class="envelope" onclick="abrirCarta()">
+    <img src="envelope.png" alt="Envelope fechado">
+  </div>
+  <div id="carta" class="carta hidden">
+    <section class="text"><div class="conteudo-carta">
+      <p>Muito bem namolado!</p>
+      <p>Espero que cada fase tenha te feito sorrir e te lembrado o quanto você é importante pra mim.<br>
+        Todas as linhas desse código foram escritas pensando nessa carinha que você faria quando visse tudo pronto. E
+        isso, por si só, já fez tudo valer a pena.</p>
+      <p>Inspirada na carta histórica do último 2 de dezembro, vou tentar seguir uma linha diferente — voltada à
+        programação.</p>
+      <p>
+        Morar com você tem sido um projeto em desenvolvimento contínuo, em que a  premissa inicial — de que seríamos ótimos 
+        juntos — está sendo validada diariamente.
+        Nosso <abbr title="Onde são armazenados os arquivos e histórico de um projeto">repositório</abbr> principal é
+        essa casa, que estamos
+        <abbr title="Limpando e otimizando">refatorando</abbr> juntos pra transformar em um lar. A rotina, ainda que
+        previsível, sempre traz
+        <abbr title="Novas funcionalidades">features</abbr> inesperadas: rodamos testes de paciência com hábitos e
+        manias um do outro, aplicamos
+        <code>if-else</code> na hora de dividir os chocolates e, às vezes, travamos um loop infinito sobre ir ou não
+        caminhar.
+        Já resolvemos alguns bugs de convivência:
+        <abbr title="Analisamos e corrigimos erros">depuramos</abbr> o código que decide qual o lado da cama pertence a
+        quem, atualizamos a política sobre abaixar a tampa da privada, entramos em um consenso
+        <span class="entre-parenteses">(temporário)</span> sobre assistir legendado ou dublado, corrigimos algumas
+        lógicas de organização e até implementamos uma lógica condicional
+        <span class="entre-parenteses">(parcialmente justa)</span> de que quem cozinha não lava a louça. Temos nos saído
+        muito bem, eu diria.
+        E apesar de estarmos na versão beta da vida a dois, sei que o sistema que estamos criando tem potencial pra ser
+        o melhor das nossas vidas.
+      </p>
+      <p>Viver com você é o meu projeto favorito ♥️</p>
+    </div></section>
+    <button id="fecharButton">FECHAR</button>
+  </div>
+
+  <script>
+    function abrirCarta() {
+      document.getElementById('envelope').classList.add('hidden');
+      document.getElementById('carta').classList.remove('hidden');
+    }
+
+    document.getElementById('fecharButton').addEventListener('click', () => {
+      document.getElementById('carta').classList.add('hidden');
+      document.getElementById('envelope').classList.remove('hidden');
+    });
+
+  </script>
+</body>
+
+</html>
