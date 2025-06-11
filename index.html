@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <h2>Bem-vindo, Leandro!</h2>
+    <form onsubmit="log(); return false">
+      <div class="inputs">
+    <input type="password" id="password" placeholder="Digite sua senha" oninput="clearMessage()">
+    <div class="underline"></div>
+    </div>
+     <div id="message"></div>
+      <input type="submit" value="Entrar" />
+      <div class="dica">💡 Dica: data importante (dd/mm/aaaa)</div>
+    </form>
+  </main>
+
+  <script>
+    let timeout;
+    // Valida a senha e redireciona se correta
+    function log() {
+        const senha = document.getElementById('password').value;
+        const message = document.getElementById('message');
+
+        if (senha === "19032023") { // Gabarito
+            window.location.href = "/carta-gamificada/welcome/welcome.html"
+        } else {
+            message.textContent = "Senha inválida";
+
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                message.textContent = '';
+            }, 3000);
+        }
+    }
+    // Limpa a mensagem ao digitar novamente
+    function clearMessage() {
+        const message = document.getElementById('message');
+        message.textContent = '';
+        clearTimeout(timeout);
+    }
+</script>
+</body>
+</html>
