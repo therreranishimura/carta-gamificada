@@ -1,0 +1,154 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #263238;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-family: 'Silkscreen', sans-serif;
+  color: white;
+  font-size: 35px;
+}
+
+h3 {
+  margin-bottom: 30px;
+}
+
+.quiz-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 15px;
+  width: 100%;
+  min-width: 800px;
+  height: auto;
+  min-height: 370px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.question {
+  color: #263238;
+}
+
+.options button {
+  display: block;
+  margin: 10px auto;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #263238;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 85%;
+  max-width: 650px;
+}
+
+.options button:hover {
+  background-color: #5d8498;
+}
+
+.quizButton {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 13px;
+  border: none;
+  border-radius: 10px;
+  background-color: #263238;
+  color: white;
+  cursor: pointer;
+}
+
+.quizButton:hover {
+  letter-spacing: 0.5px;
+}
+
+
+#nextPhaseButton:hover {
+  letter-spacing: 0.5px;
+}
+
+.feedback {
+  font-family: 'Silkscreen', sans-serif;
+  color: #263238;
+  font-size: 18px;
+  padding: 35px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .quiz-container {
+    padding: 30px 16px;
+  }
+
+  .options button {
+    padding: 16px;
+    font-size: 13px;
+  }
+
+  .quizButton {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+
+  .feedback {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 20px 12px;
+  }
+
+  .options button {
+    padding: 14px;
+    font-size: 12px;
+  }
+
+  .quizButton {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .question {
+    font-size: 15px;
+  }
+
+  .options button {
+    font-size: 17px;
+  }
+
+  .quizButton {
+    font-size: 16px;
+  }
+
+  .feedback {
+    font-size: 22px;
+  }
+}
