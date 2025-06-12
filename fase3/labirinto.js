@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Botão para avançar para a próxima fase
   nextButton.addEventListener('click', () => {
-    window.location.href = '/carta-gamificada/fase4/enigma.html';
+    window.location.href = '/fase4/enigma.html';
   });
 
 });

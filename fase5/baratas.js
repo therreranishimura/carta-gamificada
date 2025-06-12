@@ -123,7 +123,7 @@ function createEnemy() {
             const nextButton = document.getElementById('nextButton');
             nextButton.style.display = 'block';
             nextButton.addEventListener('click', () => {
-                window.location.href = '/carta-gamificada/final/final.html'; // Link para a próxima página
+                window.location.href = '/final/final.html'; // Link para a próxima página
             });
         }
 

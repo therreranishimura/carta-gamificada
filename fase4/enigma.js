@@ -61,14 +61,14 @@ document.getElementById('verificarButton').addEventListener('click', function ()
       progresso.style.width = "100%";
     }, 50);
 
-    const mensagem = "ISSO MESMO NAMOLADO, MUITO BEM! PREPARE-SE PARA A ÚLTIMA FASE!";
+    const mensagem = "MANDOU BEM! PREPARE-SE PARA A ÚLTIMA FASE...";
     feedback.textContent = mensagem;
     feedback.style.color = "#263238";
 
 
     // Redireciona após 5 segundos
     setTimeout(() => {
-      location.href = "/carta-gamificada/fase5/baratas.html";
+      location.href = "/fase5/baratas.html";
     }, 5000);
   }
 });

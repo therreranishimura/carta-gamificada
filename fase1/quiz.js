@@ -73,7 +73,7 @@ function showResult() {
   if (correctAnswers === quizData.length) {
     quizEl.innerHTML = `
       <h2 class="feedback">Parabéns você completou o quiz!</h2>
-      <button id="nextPhaseButton" class="quizButton" onclick="location.href='/carta-gamificada/fase2/memoria.html'">CONTINUAR</button>
+      <button id="nextPhaseButton" class="quizButton" onclick="location.href='/fase2/memoria.html'">CONTINUAR</button>
     `;
     feedbackEl.textContent = '';
   } else {

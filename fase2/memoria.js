@@ -79,5 +79,5 @@ shuffled.forEach(src => {
 
 // Botão para avançar para a próxima fase
 nextButton.addEventListener('click', () => {
-  window.location.href = '/carta-gamificada/fase3/labirinto.html';
+  window.location.href = '/fase3/labirinto.html';
 });

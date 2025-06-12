@@ -9,7 +9,7 @@ body {
     margin: 0;
     text-align: center;
     padding: 16px;
-    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .container {
