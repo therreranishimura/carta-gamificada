@@ -113,7 +113,7 @@ function createEnemy() {
         }
 
         // Exibe mensagem de vitória e botão para próxima fase
-        if (score >= 3 && gameRunning) {
+        if (score >= 30 && gameRunning) {
             gameRunning = false;
             victorySound.play();
             message.textContent = 'Parabéns! Você salvou sua princesa e merece receber seu prêmio...';
