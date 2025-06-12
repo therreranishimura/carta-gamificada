@@ -23,6 +23,11 @@
   </main>
 
   <script>
+
+    const basePath = window.location.hostname.includes("github.io")
+    ? "/carta-gamificada"
+    : "";
+
     let timeout;
     // Valida a senha e redireciona se correta
     function log() {
@@ -30,7 +35,7 @@
         const message = document.getElementById('message');
 
         if (senha === "19032023") { // Gabarito
-            window.location.href = "carta-gamificada/welcome/welcome.html"
+            window.location.href = `${basePath}/welcome/welcome.html`;
         } else {
             message.textContent = "Senha inválida";
 
@@ -46,6 +51,7 @@
         message.textContent = '';
         clearTimeout(timeout);
     }
+  
 </script>
 </body>
 </html>
