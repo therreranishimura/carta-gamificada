@@ -78,6 +78,10 @@ shuffled.forEach(src => {
 });
 
 // Botão para avançar para a próxima fase
+const basePath = window.location.hostname.includes("github.io")
+  ? "/carta-gamificada"
+  : "";
+
 nextButton.addEventListener('click', () => {
-  window.location.href = '/fase3/labirinto.html';
+  window.location.href = `${basePath}/fase3/labirinto.html`;
 });

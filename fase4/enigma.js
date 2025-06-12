@@ -65,10 +65,13 @@ document.getElementById('verificarButton').addEventListener('click', function ()
     feedback.textContent = mensagem;
     feedback.style.color = "#263238";
 
-
     // Redireciona após 5 segundos
+    const basePath = window.location.hostname.includes("github.io")
+      ? "/carta-gamificada"
+      : "";
+
     setTimeout(() => {
-      location.href = "/fase5/baratas.html";
+      location.href = `${basePath}/fase5/baratas.html`;
     }, 5000);
   }
 });

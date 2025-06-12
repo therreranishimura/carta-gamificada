@@ -130,8 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
   startGame();
 
   // Botão para avançar para a próxima fase
+  const basePath = window.location.hostname.includes("github.io")
+    ? "/carta-gamificada"
+    : "";
+
   nextButton.addEventListener('click', () => {
-    window.location.href = '/fase4/enigma.html';
+    window.location.href = `${basePath}/fase4/enigma.html`;
   });
 
 });

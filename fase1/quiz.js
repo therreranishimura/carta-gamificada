@@ -73,8 +73,17 @@ function showResult() {
   if (correctAnswers === quizData.length) {
     quizEl.innerHTML = `
       <h2 class="feedback">Parabéns você completou o quiz!</h2>
-      <button id="nextPhaseButton" class="quizButton" onclick="location.href='/fase2/memoria.html'">CONTINUAR</button>
-    `;
+      <button id="nextPhaseButton" class="quizButton">CONTINUAR</button>
+      `;
+
+    const basePath = window.location.hostname.includes("github.io")
+      ? "/carta-gamificada"
+      : "";
+
+    document.getElementById("nextPhaseButton").addEventListener("click", () => {
+      window.location.href = `${basePath}/fase2/memoria.html`;
+    });
+
     feedbackEl.textContent = '';
   } else {
     quizEl.innerHTML = '';

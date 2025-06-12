@@ -113,7 +113,7 @@ function createEnemy() {
         }
 
         // Exibe mensagem de vitória e botão para próxima fase
-        if (score >= 30 && gameRunning) {
+        if (score >= 3 && gameRunning) {
             gameRunning = false;
             victorySound.play();
             message.textContent = 'Parabéns! Você salvou sua princesa e merece receber seu prêmio...';
@@ -122,8 +122,14 @@ function createEnemy() {
 
             const nextButton = document.getElementById('nextButton');
             nextButton.style.display = 'block';
+
+            // Redireciona para a próxima página
+            const basePath = window.location.hostname.includes("github.io")
+                ? "/carta-gamificada"
+                : "";
+
             nextButton.addEventListener('click', () => {
-                window.location.href = '/final/final.html'; // Link para a próxima página
+                window.location.href = `${basePath}/final/final.html`;
             });
         }
 
